@@ -1,0 +1,19 @@
+// MENÚ HAMBURGUESA
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+
+// SCROLL SUAVE (solo si hay #)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});

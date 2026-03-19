@@ -1,0 +1,200 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 🔝 NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(122, 57, 57, 0.7);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px; /* 🔥 mejor tamaño (80px era muy grande) */
+    width: auto;
+    display: block;
+}
+
+/* MENÚ */
+.navbar ul {
+    justify-self: center; 
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: rgb(252, 247, 247);/* color de letras  */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* BOTÓN NAV */
+.btn-nav {
+    background: #7c0b43;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 🖼️ HERO */
+.hero {
+    height: 100vh;
+    background-image: url('imagenes/fondo-header3.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    color: rgb(245, 245, 248);
+    background: rgba(15, 14, 14, 0.4);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* BOTONES */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: rgb(161, 23, 23);
+    border: 2px solid rgb(62, 160, 38);
+}
+
+.btn-green {
+    background: #8a0caa;
+    color: black;
+    border: none;
+}
+
+/* SECCIONES */
+.section {
+    padding: 120px 20px 80px;
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify; /* 🔥 texto justificado */
+}
+
+/* PÁRRAFOS */
+.section p {
+    margin-bottom: 20px;
+    text-indent: 30px; /* 🔥 sangría tipo libro */
+}
+
+/* LISTAS */
+.section ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+/* VIDEO */
+.section video {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+/* MEJORAS PARA LA SECCIÓN MISIÓN */
+.section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* IMAGEN CENTRADA Y RESPONSIVA */
+.img-mision {
+    display: block;
+    margin: 30px auto;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+/* IMAGEN CENTRADA Y RESPONSIVA */
+.img-contacto{
+    display: block;
+    margin: 30px auto;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.img-objetivo{
+    display: block;
+    margin: 30px auto;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.img-responsabilidad{
+    display: block;
+    margin: 30px auto;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.img-valores{
+    display: block;
+    margin: 30px auto;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* MEJORAR PÁRRAFO */
+.section p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 18px;
+}
