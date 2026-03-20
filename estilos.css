@@ -1,7 +1,13 @@
 /* RESET */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Montserrat', sans-serif;
+    padding-top: 120px; /* evita que el navbar tape contenido */
 }
 
 /* 🔝 NAVBAR */
@@ -15,6 +21,7 @@ body {
     padding: 15px 40px;
     background: rgba(122, 57, 57, 0.7);
     z-index: 1000;
+    transition: top 0.3s; /* 🔥 AQUÍ VA */
 }
 
 .logo {
@@ -23,7 +30,7 @@ body {
 }
 
 .logo img {
-    height: 100px; /* 🔥 mejor tamaño (80px era muy grande) */
+    height: 100px;
     width: auto;
     display: block;
 }
@@ -37,7 +44,7 @@ body {
 }
 
 .navbar a {
-    color: rgb(252, 247, 247);/* color de letras  */
+    color: rgb(252, 247, 247);
     text-decoration: none;
     font-weight: 500;
 }
@@ -107,13 +114,13 @@ body {
     margin: auto;
     font-size: 18px;
     line-height: 1.8;
-    text-align: justify; /* 🔥 texto justificado */
+    text-align: justify;
 }
 
 /* PÁRRAFOS */
 .section p {
     margin-bottom: 20px;
-    text-indent: 30px; /* 🔥 sangría tipo libro */
+    text-indent: 30px;
 }
 
 /* LISTAS */
@@ -129,72 +136,71 @@ body {
     border-radius: 10px;
 }
 
-/* 📱 RESPONSIVE */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 10px 20px;
-    }
-
-    .logo img {
-        height: 40px;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
+/* IMÁGENES RESPONSIVAS */
+img {
+    max-width: 100%;
+    height: auto;
 }
-/* MEJORAS PARA LA SECCIÓN MISIÓN */
+
+/* IMÁGENES ESPECÍFICAS */
+.img-mision,
+.img-contacto,
+.img-objetivo,
+.img-responsabilidad,
+.img-valores {
+    display: block;
+    margin: 30px auto;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* TÍTULOS */
 .section h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
-/* IMAGEN CENTRADA Y RESPONSIVA */
-.img-mision {
-    display: block;
-    margin: 30px auto;
-    max-width: 90%;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-/* IMAGEN CENTRADA Y RESPONSIVA */
-.img-contacto{
-    display: block;
-    margin: 30px auto;
-    max-width: 90%;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-.img-objetivo{
-    display: block;
-    margin: 30px auto;
-    max-width: 90%;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-.img-responsabilidad{
-    display: block;
-    margin: 30px auto;
-    max-width: 90%;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-.img-valores{
-    display: block;
-    margin: 30px auto;
-    max-width: 90%;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
 
-/* MEJORAR PÁRRAFO */
-.section p {
-    text-align: justify;
-    line-height: 1.8;
-    font-size: 18px;
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .hero {
+        height: 80vh;
+        padding: 20px;
+    }
+
+    .hero-overlay {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 100px 15px 60px;
+        font-size: 16px;
+    }
 }

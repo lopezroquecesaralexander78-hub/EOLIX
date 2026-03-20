@@ -1,19 +1,30 @@
-// MENÚ HAMBURGUESA
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-}
+// 🔥 ESPERAR A QUE TODO CARGUE
+document.addEventListener("DOMContentLoaded", () => {
 
-// SCROLL SUAVE (solo si hay #)
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
+    // 🔥 EVITA QUE EL NAVEGADOR RECUERDE EL SCROLL
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
 
-        if (target) {
-            e.preventDefault();
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
+    // 🔥 SIEMPRE INICIAR ARRIBA
+    window.scrollTo(0, 0);
+
+    // 🔥 NAVBAR INTELIGENTE
+    let lastScroll = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        let currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            // 🔻 Bajando → ocultar
+            navbar.style.top = "-120px";
+        } else {
+            // 🔺 Subiendo → mostrar
+            navbar.style.top = "0";
         }
+
+        lastScroll = currentScroll;
     });
+
 });
